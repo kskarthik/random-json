@@ -1,7 +1,9 @@
 # Random JSON Generator
 
 A command-line tool to generate random JSON strings. Expected to be useful for
-testing other software.
+testing other software. This project is amusing to myself because the initial
+version is barely 100 lines of Go code and it still serves a real purpose,
+also being a useful example for Go beginners (hopefully).
 
 ## Prerequisite
 

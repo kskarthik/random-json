@@ -1,6 +1,6 @@
 // This file is part of random-json
 // Copyright (C) 2022 Nandakumar Edamana
-// Under the terms of the GNU General Public License version 3.
+// Under Apache License, Version 2.0
 
 package main
 

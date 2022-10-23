@@ -38,15 +38,15 @@ func (this *RandomJsonGenerator) Generate() interface{} {
 }
 
 func (this *RandomJsonGenerator) GenerateWithMaxDepth(maxDepth int) interface{} {
-	// Make sure objects have the highest chance and arrays have the next
+	// Make sure objects have the highest chance and arrays have the next	
+	// [0-30) - Object, (30-50] - Array, (50-100) - any (inc. Object and Array)
 
 	rnd := rand.Intn(100)
-	
-	// Object if rnd > 50, Array if >25, any otherwise (inc. Object and Array).
+
 	typ := Object
-	if rnd < 25 {
+	if rnd > 50 {
 		typ = rand.Intn(TYPE_GUARD)
-	} else if rnd < 50 {
+	} else if rnd > 30 {
 		typ = Array
 	}
 	

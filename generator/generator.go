@@ -42,11 +42,12 @@ func (this *RandomJsonGenerator) GenerateWithMaxDepth(maxDepth int) interface{} 
 
 	rnd := rand.Intn(100)
 	
+	// Object if rnd > 50, Array if >25, any otherwise (inc. Object and Array).
 	typ := Object
 	if rnd < 25 {
 		typ = rand.Intn(TYPE_GUARD)
 	} else if rnd < 50 {
-		typ = rand.Intn(TYPE_GUARD)
+		typ = Array
 	}
 	
 	// ------------------------------------------------------------------
